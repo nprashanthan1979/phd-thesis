@@ -1,0 +1,4 @@
+// Source page 11.
+= 5 Potential contributions and implications
+
+Teachers with good mathematics knowledge and effective teaching practices are needed for imparting excellent mathematics education. This study contributes to the development of effective professional development programmes for mathematics teachers and inform policy decisions in mathematics education through the keen identification of key challenges and barriers to implementing problem-solving strategies. This study also states recommendations for professional development programmes to support teachers in overcoming these challenges. This study contributes to design and implement an intervention to empower problem solving competency and enhance teacher’s competency in applying problem-solving strategies in mathematics. It contributes to students' academic success by proposing a teacher education module.

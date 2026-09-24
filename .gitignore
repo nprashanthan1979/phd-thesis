@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+*.swp
+
+# Secrets
+.env
+secrets/
+
+# Raw / identifiable participant data never enters git (UoC AI & ethics policy)
+data/raw/
+data/identifiable/
+consent/
+
+# Typst preview renders
+typst/**/p-*.png

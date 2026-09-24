@@ -108,6 +108,53 @@ Source: *Policy on the Use of Generative AI in Academic and Administrative Activ
 - Keep consent forms and ethics documents out of any public artifact.
 - Do not publish or share documents externally unless explicitly asked.
 
+## Git workflow — commit after every completed step
+
+The repo is local (no remote), and all work is committed on `main`. This overrides the global “PR only” rule, which assumes a hosted repo.
+
+**Commit as soon as a unit of work is complete**; don't batch unrelated work. A unit is any of:
+- a new or revised chapter, section, instrument, figure or table
+- an extraction or summary of a source document (handbook, paper, policy)
+- a literature-review entry, or a batch of verified references
+- an analysis run (script + output) or a data-cleaning step
+- a template, build or tooling change
+- a CLAUDE.md or `ai-use-log.md` update
+
+**Before committing:**
+1. Rebuild every Typst document you touched (`typst compile ...`). It must compile without errors. Commit the rebuilt PDFs with their sources.
+2. Run `git status` and `git diff --stat`, and check that no participant data, `.env`, or files under `data/raw/` are staged.
+3. If AI did anything that needs acknowledgement, add an entry to `ai-use-log.md` in the same commit.
+
+**Staging:** stage files by path (`git add typst/chapters/x.typ ...`), never `git add -A` or `git add .`.
+
+**Message format** (Conventional-Commits style, subject ≤ 72 chars, imperative mood):
+
+```
+<type>(<scope>): <what changed>
+
+<why / source / what is still open — optional>
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+```
+
+| type | use for |
+|---|---|
+| `content` | new or revised thesis/proposal text written by the candidate, or its structure |
+| `lit` | literature notes, verified references, source extractions |
+| `analysis` | review/critique documents, statistical scripts and outputs |
+| `data` | anonymised datasets, codebooks, cleaning steps |
+| `instrument` | questionnaires, interview guides, observation checklists |
+| `build` | Typst templates, styling, tooling |
+| `fix` | corrections to existing content or data |
+| `docs` | CLAUDE.md, READMEs, `ai-use-log.md` |
+
+Scopes are short: `proposal`, `thesis`, `ch1`…`ch6`, `meta`, `refs`, `handbook`, `ai-policy`.
+
+Examples: `lit(handbook): extract FoE by-laws 2022 thesis rules` ·
+`analysis(proposal): add citation audit` · `build(thesis): add FGS Annex V template`.
+
+**Never:** amend or rebase commits that already exist, force anything, commit failing builds, or push (there is no remote) unless asked.
+
 ## Communication
 - Keep responses terse, and put full substance in the Typst files.
 - When reporting findings, cite the proposal section/page (e.g. “§4.1, p. 9”).

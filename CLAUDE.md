@@ -48,7 +48,7 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
     ├── chapters/         # One file per proposal section, included by main.typ
     ├── thesis.typ        # PhD thesis entry point (front matter, chapters, refs, appendices)
     ├── thesis-template.typ  # Thesis layout, modelled on the candidate's MPhil thesis PDF
-    └── thesis/           # Thesis chapters (ch1–ch8), abstract, appendices, references.bib, apa.csl
+    └── thesis/           # Thesis chapters (ch1–ch5), abstract, appendices, references.bib, apa.csl
 ```
 
 Thesis layout (from `complete thesis final draft print.pdf`, the candidate's 2022 MPhil): A4; margins

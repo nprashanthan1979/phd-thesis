@@ -49,11 +49,8 @@
 #include "thesis/ch1-introduction.typ"
 #include "thesis/ch2-literature-review.typ"
 #include "thesis/ch3-methodology.typ"
-#include "thesis/ch4-phase1-results.typ"
-#include "thesis/ch5-phase2-findings.typ"
-#include "thesis/ch6-phase3-intervention.typ"
-#include "thesis/ch7-discussion.typ"
-#include "thesis/ch8-conclusion.typ"
+#include "thesis/ch4-results-discussion.typ"
+#include "thesis/ch5-conclusion.typ"
 
 #heading(level: 1, numbering: none)[References]
 #set par(justify: false)

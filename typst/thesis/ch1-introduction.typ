@@ -84,4 +84,4 @@ media of instruction (Sinhala, Tamil, English), period of study.]
 voluntary participation, pseudonyms (T01, S01, Z01). Full detail goes in §3.]
 
 == Organisation of the Thesis
-#todo[One short paragraph per chapter (1–8).]
+#todo[One short paragraph per chapter (1–5).]

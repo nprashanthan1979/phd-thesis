@@ -36,7 +36,6 @@
   ([CVI], [Content Validity Index]),
   ([DOE], [Department of Examinations]),
   ([EFA], [Exploratory Factor Analysis]),
-  ([G.C.E (A/L)], [General Certificate of Education (Advanced Level)]),
   ([G.C.E (O/L)], [General Certificate of Education (Ordinary Level)]),
   ([MKT], [Mathematical Knowledge for Teaching]),
   ([MOE], [Ministry of Education]),

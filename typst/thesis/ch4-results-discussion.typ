@@ -23,7 +23,7 @@ normality checks.]
 === Profile of Respondents
 #table-skeleton(caption: [Profile of respondents], rows: 7,
   [Characteristic], [Category], [n], [%])
-#todo[Gender, age, qualifications, professional training, years of A/L teaching,
+#todo[Gender, age, qualifications, professional training, years of O/L teaching,
 education zone, school type, medium.]
 
 === Validity and Reliability of the Instrument
@@ -67,7 +67,7 @@ the research questions.]
 
 === Profile of Participants
 #table-skeleton(caption: [Profile of Phase 2 participants], rows: 5,
-  [Pseudonym], [Zone], [School type], [Years of A/L teaching], [Data source])
+  [Pseudonym], [Zone], [School type], [Years of O/L teaching], [Data source])
 
 === Analytic Process
 #todo[Coding stages, codebook, and how themes were generated and reviewed.]

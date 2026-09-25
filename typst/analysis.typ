@@ -41,7 +41,7 @@
   [*Supervisor*], [#supervisor.name — #supervisor.role],
   [*Supervisor sign-off*], [Signed, dated #supervisor.signed (recommendation text left blank)],
   [*Field*], [Mathematics education / teacher professional development],
-  [*Population*], [Senior secondary (G.C.E. A/L) mathematics teachers, Sri Lanka],
+  [*Population*], [Senior secondary (G.C.E. O/L, grades 10–11) mathematics teachers, Sri Lanka (confirmed by the candidate)],
   [*Design*], [Multi-phase mixed methods: quantitative survey → qualitative exploration → experimental/action intervention → teacher education module],
   [*Planned period*], [#month-label(1) – #month-label(months.len()) (#months.len() months)],
   [*Key deliverable*], [A teacher education module on effective use of problem-solving strategies in senior secondary mathematics],
@@ -186,8 +186,8 @@ Observations below compare the proposal against itself. They are offered as revi
 
 == Construct alignment
 - Title, problem and objectives focus on *competency / cognitive ability in problem-solving strategies*; the theoretical framework and much of §4.1 focus on *attitudes and beliefs towards mathematics* (Theory of Planned Behavior, Self-Efficacy). The link between the two is not stated.
-- §4.1 Phase 2.3 refers to “self-learning … G.C.E advanced level classes” and Phase 3 to “self-learning interventions”, which do not appear elsewhere — this looks carried over from a different study.
-- Population is “senior secondary” in the title but “secondary school mathematics teachers” in Participants; DOE 2019 evidence concerns the O/L (junior) examination.
+- §4.1 Phase 2.3 refers to “self-learning … G.C.E advanced level classes” and Phase 3 to “self-learning interventions”, which do not appear elsewhere and conflict with the O/L target population — this looks carried over from a different study.
+- Population is “senior secondary” in the title but “secondary school mathematics teachers” in Participants. The candidate has confirmed the target is G.C.E. O/L (grades 10–11) teachers only; Participants should say so. DOE 2019 (an O/L examiners’ report) fits this target.
 - §4.1 refers to “the research questions”, but no research questions are listed.
 
 == Design completeness

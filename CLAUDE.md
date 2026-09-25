@@ -14,7 +14,7 @@ stack, `go vet`, `pnpm check`, etc.) does **not** apply here. Follow this file i
 | Proposal signed | 23.01.2025 |
 | Planned period | Jan 2025 – May 2026 (17 months) |
 | Design | Multi-phase mixed methods: Phase 1 quantitative survey → Phase 2 qualitative exploration → Phase 3 experimental/action intervention → teacher education module |
-| Population | Senior secondary (G.C.E. A/L) mathematics teachers, Sri Lanka |
+| Population | Senior secondary (G.C.E. O/L, grades 10–11) mathematics teachers, Sri Lanka — confirmed by the candidate 2026-09-25; A/L is out of scope |
 
 ### Research objectives (verbatim, numbered I–VI)
 1. Identify the current level of cognitive abilities of secondary mathematics teachers regarding problem-solving strategies.
@@ -30,7 +30,7 @@ Objective → phase map: Phase 1 → I, II · Phase 2 → I, II, III (both state
 These are listed in full in `typst/analysis.typ` § Consistency review. Keep them in mind in all later work:
 - The proposal gives four sample sizes (45 / 150 / 30 / 20) and three sampling schemes (stratified / purposive / convenience).
 - The construct drifts: objectives are about problem-solving competency, but the framework and methods focus on attitudes and beliefs (TPB, self-efficacy).
-- §4.1 contains carried-over text about “self-learning … G.C.E A/L” from another study.
+- §4.1 contains carried-over text about “self-learning … G.C.E A/L” from another study (the study targets O/L only).
 - Phase 3 has no control group, pre/post instrument or intervention specification. Objective VI has no method.
 - Six in-text citations are missing from the reference list (ICMI 2016, NEC 2018, NIE 2019, DOE 2018, Vygotsky 1978, Lesh et al. 2019).
 

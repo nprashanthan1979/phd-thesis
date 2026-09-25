@@ -61,11 +61,11 @@ zonal in-service advisers).]
 == The Sri Lankan Context
 #traces(1, 2)
 
-=== G.C.E. A/L Mathematics Curriculum
+=== G.C.E. O/L Mathematics Curriculum (Grades 10–11)
 #todo[Competencies, syllabus, and teachers' guides (NIE).]
 
 === Student Performance in Mathematics
-#todo[G.C.E. A/L results evidence (Department of Examinations).]
+#todo[G.C.E. O/L mathematics results evidence (Department of Examinations).]
 
 === Mathematics Teacher Preparation and In-Service Training
 #todo[Qualifications, SBTD programmes, in-service advisers.]

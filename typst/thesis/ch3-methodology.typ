@@ -32,9 +32,10 @@ Explain how each phase informs the next.]
 #todo[Phase 3 → IV, V, VI is inferred, not stated in the proposal. Confirm it.]
 
 == Population
-#todo[G.C.E. A/L mathematics teachers in Sri Lanka: number, distribution by
-province, zone and medium. Note that the proposal says "secondary" in
-Participants but "senior secondary" in the title.]
+#todo[G.C.E. O/L (grades 10–11) mathematics teachers in Sri Lanka: number,
+distribution by province, zone and medium; inclusion criteria (currently
+teaching grade 10 or 11). The proposal says "secondary" in Participants but
+"senior secondary" in the title; state O/L explicitly.]
 
 == Phase 1: Quantitative Survey
 #traces(1, 2)

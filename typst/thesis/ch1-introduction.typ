@@ -19,8 +19,8 @@ mathematics. Name the framework the thesis adopts (e.g. Pólya, Schoenfeld,
 NCTM process standards) and verify each source before citing it.]
 
 === Senior Secondary Mathematics in Sri Lanka
-#todo[G.C.E. A/L mathematics streams, the curriculum and competency-based aims
-(NIE), examination performance evidence (Department of Examinations). Proposal
+#todo[Grades 10–11 and the G.C.E. O/L mathematics syllabus, its competency-based
+aims (NIE), and O/L examination performance evidence (Department of Examinations). Proposal
 §1.1 cites DOE 2018/2019 and NIE 2019; these are not yet in the reference list
 (see `analysis.typ` § Citation audit).]
 
@@ -69,11 +69,11 @@ attitudes/beliefs noted in `analysis.typ` § Construct alignment.]
 
 == Definition of Terms
 #todo[Operational definitions of: problem-solving strategy; competency; cognitive
-ability (Objective I); level of use (Objective II); senior secondary teacher;
+ability (Objective I); level of use (Objective II); senior secondary (G.C.E. O/L) mathematics teacher;
 intervention; teacher education module.]
 
 == Scope and Delimitations
-#todo[Population (G.C.E. A/L mathematics teachers), education zones covered,
+#todo[Population (G.C.E. O/L mathematics teachers, grades 10–11; A/L excluded), education zones covered,
 media of instruction (Sinhala, Tamil, English), period of study.]
 
 == Limitations of the Study

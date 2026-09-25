@@ -52,7 +52,7 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
 ```
 
 Thesis layout (from `complete thesis final draft print.pdf`, the candidate's 2022 MPhil): A4; margins
-L 1.5in, R/T/B 1in; Times New Roman 12pt; 1.5 spacing; page number top-centre, Roman capitals in front
+L 40mm (binding), R 15mm, T/B 30mm; Times New Roman 12pt; 1.5 spacing; page number top-centre, Roman capitals in front
 matter, Arabic from Chapter 1; tables captioned above, figures below, numbered per chapter. APA 7 via
 the `versatile-apa` CSL (vendored in `thesis/apa.csl`); use `apa-figure` for table/figure notes.
 Only add `.bib` entries for sources the candidate has read.

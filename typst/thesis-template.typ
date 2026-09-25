@@ -1,7 +1,7 @@
 // Thesis layout modelled on the candidate's MPhil thesis
 // ("complete thesis final draft print.pdf", UoC Faculty of Education, 2022).
-// Measured from that PDF: A4; margins left 1.5in, right/top/bottom 1in;
-// Times New Roman 12pt; 1.5 line spacing (20.7pt pitch); justified;
+// A4; margins left 40mm (binding), right 15mm, top/bottom 30mm;
+// Times New Roman 12pt; 1.5 line spacing (20.7pt pitch, as in the MPhil); justified;
 // page number top-centre, Roman capitals (I, II, …) in front matter,
 // Arabic from Chapter 1; tables captioned above, figures below,
 // numbered per chapter (Table 1.1, Figure 2.3).
@@ -24,7 +24,7 @@
   set document(title: title, author: author)
   set page(
     paper: "a4",
-    margin: (left: 1.5in, right: 1in, top: 1in, bottom: 1in),
+    margin: (left: 40mm, right: 15mm, top: 30mm, bottom: 30mm),
     header-ascent: 45%,
     header: context {
       let fmt = page.numbering
@@ -34,7 +34,11 @@
     footer: none,
   )
   set text(font: serif, size: 12pt, lang: "en", region: "gb")
-  set par(justify: true, leading: 1.05em, spacing: 1.8em)
+  // 1.5 line spacing: baseline pitch = 1.5 × single line height. Single line
+  // height for Times New Roman is 1.15em (ascender + descender + line gap, as
+  // Word uses); Typst leading is measured from the baseline to the next line's
+  // cap height (0.662em), so leading = 1.725em − 0.662em.
+  set par(justify: true, leading: 1.063em, spacing: 1.8em)
 
   // Heading numbering: 1 / 1.1 / 1.1.1 / 1.1.1.1
   set heading(numbering: "1.1")

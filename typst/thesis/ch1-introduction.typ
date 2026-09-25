@@ -1,87 +1,77 @@
 #import "../meta.typ": objectives
-#import "../thesis-template.typ": todo, traces, figure-placeholder
-// Layout only. Guidance boxes say what each section needs; the candidate
-// writes all prose (UoC GenAI policy). "Proposal §x" = signed proposal section.
+#import "../thesis-template.typ": todo
+// Candidate's own draft, transcribed verbatim from drafts/2026-09-25/chapter1.pdf
+// (3 pp., Word 2016). Wording, spelling and numbering are the candidate's; do not
+// edit text here without the candidate's instruction. In the source, §1.4
+// objectives are highlighted (yellow); highlighting not reproduced.
 
 = Introduction
 
-== Introduction
-#todo[Open the chapter: the place of problem solving in mathematics education and
-why teachers' competency in using problem-solving strategies matters. Source:
-Proposal §1.1, paras 1–2.]
-
 == Background of the Study
-#traces(1, 2)
 
-=== Problem Solving in Mathematics Education
-#todo[What problem solving and problem-solving strategies mean in school
-mathematics. Name the framework the thesis adopts (e.g. Pólya, Schoenfeld,
-NCTM process standards) and verify each source before citing it.]
+Mathematics education plays a crucial role in developing logical reasoning, analytical thinking, and problem-solving abilities among students. In the context of secondary education in Sri Lanka, mathematics is a core subject that significantly influences students’ academic and professional pathways. However, despite its importance, many students demonstrate difficulties in understanding mathematical concepts and applying them to solve problems effectively.
 
-=== Senior Secondary Mathematics in Sri Lanka
-#todo[Grades 10–11 and the G.C.E. O/L mathematics syllabus, its competency-based
-aims (NIE), and O/L examination performance evidence (Department of Examinations). Proposal
-§1.1 cites DOE 2018/2019 and NIE 2019; these are not yet in the reference list
-(see `analysis.typ` § Citation audit).]
+One of the major contributing factors to this issue is the teaching approach adopted in classrooms. Traditional teaching methods in mathematics often emphasize procedural knowledge and rote learning rather than conceptual understanding and problem-solving skills. As a result, students may perform well in routine exercises but struggle when faced with unfamiliar or complex problems.
 
-=== Teachers' Competency in Using Problem-Solving Strategies
-#todo[Evidence on teachers' content and pedagogical knowledge (Proposal §1.1:
-ICMI 2016, Siregar 2017, NEC 2018). Say what "competency" includes in this study.]
+Problem-solving strategies are widely recognized as essential tools in mathematics education. These strategies include understanding the problem, devising a plan, carrying out the plan, and reflecting on the solution—principles popularized by George Pólya. The effective use of such strategies helps learners develop deeper understanding and adaptability in mathematics.
+
+Senior secondary teachers play a vital role in fostering these skills. Their competency in applying problem-solving strategies directly impacts students’ learning outcomes. However, there is evidence that many teachers lack adequate training, resources, or confidence to integrate these strategies effectively into their teaching practices.
+
+Therefore, enhancing teachers’ competency in using problem-solving strategies is essential to improve the quality of mathematics education in Sri Lanka.
 
 == Statement of the Problem
-#traces(1, 2, 3)
-#todo[Condense Proposal §1.2 into a problem statement: the gap between teachers'
-subject knowledge and their use of problem-solving strategies in class, and the
-effect on students. End with the gap this study addresses.]
+
+Despite the recognized importance of problem-solving in mathematics, many senior secondary students in Sri Lanka exhibit low performance in solving non-routine mathematical problems. This issue may stem from teachers’ limited use of effective problem-solving strategies during instruction.
+
+Teachers often rely on traditional, teacher-centered methods that focus on memorization and repetitive practice. Consequently, students are not adequately exposed to heuristic approaches or critical thinking processes required for solving complex problems.
+The problem addressed in this study is the insufficient competency among senior secondary mathematics teachers in Sri Lanka in utilizing problem-solving strategies effectively in their teaching practices.
 
 == Purpose of the Study
-#todo[One paragraph linking the problem to the three phases and the teacher
-education module.]
 
-== Research Objectives
-The objectives of the study are to:
+The main purpose of this study is to enhance the competency of senior secondary mathematics teachers in Sri Lanka in using problem-solving strategies in their teaching.
+
+== Objectives of the Study
+
+// Identical to the signed proposal's objectives, so rendered from meta.typ.
 #enum(numbering: "I.", ..objectives.map(o => [#o]))
 
 == Research Questions
-#traces(1, 2, 3, 4, 5, 6)
-#todo[The proposal lists no research questions, but §4.1 refers to them. Write at
-least one question per objective (I–VI), numbered RQ1–RQ6.]
 
-== Hypotheses
-#traces(1, 2, 5)
-#todo[Null and alternative hypotheses for the Phase 1 relationships and for the
-Phase 3 pre/post comparison (H#sub[0]1 …). Leave this out if the design is not
-hypothesis-testing.]
+The study is guided by the following research questions:
+
++ What is the current level of competency of senior secondary mathematics teachers in using problem-solving strategies?
++ What challenges do teachers face in implementing these strategies?
++ How can teachers’ competency in using problem-solving strategies be enhanced?
++ What is the impact of the intervention on teachers’ instructional practices?
 
 == Significance of the Study
-#todo[Expected value for teachers, teacher educators, NIE, zonal education
-offices and policy. Source: Proposal §5 (Potential contributions).]
 
-== Conceptual Framework
-#traces(1, 2, 3, 4, 5, 6)
-#todo[Diagram and explanation of the study's constructs and how they link:
-cognitive ability → use of strategies → areas for improvement → intervention →
-progress → module. Resolve the construct drift between competency and
-attitudes/beliefs noted in `analysis.typ` § Construct alignment.]
-#figure-placeholder(caption: [Conceptual framework of the study])[
-  Conceptual framework diagram (candidate to design)
-]
+This study is significant for several reasons:
+- *Teachers:* It will help teachers improve their instructional strategies and professional competence.
+- *Students:* Improved teaching methods will enhance students’ problem-solving skills and overall achievement in mathematics.
+- *Educational Authorities:* Findings can inform curriculum development and teacher training programs in Sri Lanka.
+- *Researchers:* The study will contribute to existing literature on mathematics education and teacher development.
 
-== Definition of Terms
-#todo[Operational definitions of: problem-solving strategy; competency; cognitive
-ability (Objective I); level of use (Objective II); senior secondary (G.C.E. O/L) mathematics teacher;
-intervention; teacher education module.]
+== Scope of the Study
 
-== Scope and Delimitations
-#todo[Population (G.C.E. O/L mathematics teachers, grades 10–11; A/L excluded), education zones covered,
-media of instruction (Sinhala, Tamil, English), period of study.]
+This study focuses on senior secondary mathematics teachers in Sri Lanka. It specifically examines their competency in using problem-solving strategies in classroom instruction. The study may be limited to selected schools or regions due to time and resource constraints.
 
 == Limitations of the Study
-#todo[Constraints on sampling, access, time and generalisability.]
 
-== Ethical Considerations
-#todo[Brief summary: UoC Faculty of Education ethics clearance, informed consent,
-voluntary participation, pseudonyms (T01, S01, Z01). Full detail goes in §3.]
+The study may face the following limitations:
 
-== Organisation of the Thesis
-#todo[One short paragraph per chapter (1–5).]
+- Limited sample size, which may affect generalizability.
+- Time constraints in implementing and evaluating the intervention.
+- Possible bias in self-reported data from teachers.
+- Variations in school environments and resources.
+
+== Definition of Key Terms
+
+- *Problem-Solving Strategy:* A systematic approach used to understand and solve mathematical problems (e.g., strategies proposed by George Pólya).
+- *Competency:* The combination of knowledge, skills, and attitudes required to perform a task effectively.
+- *Senior Secondary Teachers:* Teachers who instruct students in upper secondary grades (typically Grades 10–13 in Sri Lanka).
+- *Mathematics Achievement:* The level of students’ performance in mathematics as measured by assessments.
+
+#todo[Outline sections not yet in the candidate's draft (add if wanted):
+Hypotheses; Conceptual Framework (with figure); Ethical Considerations;
+Organisation of the Thesis.]

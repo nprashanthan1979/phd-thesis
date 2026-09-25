@@ -46,6 +46,7 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
 ├── complete thesis final draft print.pdf   # Candidate's 2022 MPhil thesis — layout model only; never modify or stage
 ├── CLAUDE.md
 ├── ai-use-log.md         # GenAI use log (UoC policy); append a row with every AI-assisted commit
+├── drafts/YYYY-MM-DD/    # Candidate's own chapter drafts (Word PDFs) as received — never modify
 └── typst/
     ├── main.typ          # Faithful reconstruction of the signed proposal
     ├── analysis.typ      # Structured extraction + consistency review
@@ -106,6 +107,11 @@ All phase results **and** all discussion belong in Chapter 4. Do not split them 
 - `thesis-template.typ` helpers: `todo[...]` (guidance box), `traces(1, 2)` (objective tag), `table-skeleton`
   (headers + "—" cells), `figure-placeholder`, `apa-figure`, `front-heading`, `front-matter`, `main-matter`,
   `appendices`.
+- **Candidate drafts** (`drafts/…/chapterN.pdf`) are transcribed into `thesis/chN-*.typ` **verbatim**:
+  keep wording, spelling (incl. American forms), numbering order and list markers; only convert to
+  Typst formatting. Verify with a word-level diff of `pdftotext` source vs. rebuilt `thesis.pdf`
+  (expect only line-break hyphen artifacts). Escape straight apostrophes (`\'`) where the source has
+  them. Record content issues for the candidate; never fix them silently. Ch1–2 received 2026-09-25.
 - Guidance boxes say *what* a section must cover and cite the proposal section. They are never prose.
   Replace a `todo` only with text the candidate wrote.
 - Skeleton tables stay "—" until real, anonymised data exists. Never enter example or plausible numbers.

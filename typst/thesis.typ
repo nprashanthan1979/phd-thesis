@@ -53,7 +53,10 @@
 
 #heading(level: 1, numbering: none)[References]
 #set par(justify: false)
-#bibliography("thesis/references.bib")
+// DRAFT: `full: true` lists every .bib entry even if not yet cited in the text.
+// Set to false before submission so APA's "cited works only" rule holds.
+#let list-uncited-references = true
+#bibliography("thesis/references.bib", full: list-uncited-references)
 
 #show: appendices
 #include "thesis/appendices.typ"

@@ -93,6 +93,8 @@
   // References: APA 7 via the versatile-apa CSL (vendored as thesis/apa.csl),
   // single-spaced entries with 0.5in hanging indent, blank line between.
   set bibliography(style: "thesis/apa.csl", title: none)
+  // CSL terms in US English so APA wording holds ("3rd ed." not "3rd edn").
+  show bibliography: set text(region: "us")
   show bibliography: set par(first-line-indent: 0in, hanging-indent: 0.5in,
     justify: false, leading: 0.65em, spacing: 1.2em)
   // Typst wraps entries in blocks, which drops the hanging indent; re-wrap

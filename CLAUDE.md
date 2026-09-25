@@ -116,8 +116,19 @@ All phase results **and** all discussion belong in Chapter 4. Do not split them 
   Replace a `todo` only with text the candidate wrote.
 - Skeleton tables stay "—" until real, anonymised data exists. Never enter example or plausible numbers.
 
+### References
+- `thesis/references.bib` holds the candidate's 21 proposal sources, checked online 2026-09-25;
+  status and corrections are in `thesis/references-audit.md` (also lists claims in Ch1–2 that need
+  citations). Keep a `% VERIFIED / CORRECTED / UNVERIFIED` comment above every entry.
+- Type reports as `@book` with `publisher` and theses with `publisher` = university (otherwise the
+  CSL drops the institution); article numbers as `pages = {Article 012005}`.
+- Never add given names, DOIs or pages from memory — only from a checked record.
+- Never insert citations into the candidate's text; the candidate chooses where to cite.
+
 ### Open items (update when resolved)
 - `thesis-info.year` = "2027" and `qualifications` are marked `[CONFIRM]`.
+- `thesis.typ` → `list-uncited-references = true` (draft). Set to `false` before submission.
+- Four grey-literature references (DOE 2019, MOE 2018, NIE 2009, Kalamani 2009) are UNVERIFIED.
 - Official UoC degree title ("Doctor of Philosophy" vs "… in Education") not yet verified against the
   FoE by-laws / FGS handbook.
 - Phase 3 → Objectives IV–VI is inferred; candidate to confirm.

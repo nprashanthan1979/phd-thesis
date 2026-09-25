@@ -204,9 +204,11 @@ Source: *Policy on the Use of Generative AI in Academic and Administrative Activ
 - Keep consent forms and ethics documents out of any public artifact.
 - Do not publish or share documents externally unless explicitly asked.
 
-## Git workflow — commit after every completed step
+## Git workflow — commit and push after every completed step
 
-The repo is local (no remote), and all work is committed on `main`. This overrides the global “PR only” rule, which assumes a hosted repo.
+Remote: `origin` = `git@github.com:nprashanthan1979/phd-thesis.git`. All work is committed on `main` and
+pushed to `origin/main` (`git push origin main`) straight after every commit. Never create other branches,
+worktrees or PRs. This overrides the global “branch + PR only” rule (candidate's instruction, 2026-09-25).
 
 **Commit as soon as a unit of work is complete**; don't batch unrelated work. A unit is any of:
 - a new or revised chapter, section, instrument, figure or table
@@ -220,6 +222,9 @@ The repo is local (no remote), and all work is committed on `main`. This overrid
 1. Rebuild every Typst document you touched (`typst compile ...`). It must compile without errors. Commit the rebuilt PDFs with their sources.
 2. Run `git status` and `git diff --stat`, and check that no participant data, `.env`, or files under `data/raw/` are staged.
 3. If AI did anything that needs acknowledgement, add an entry to `ai-use-log.md` in the same commit.
+
+**After committing:** `git push origin main`. If the push is rejected (remote ahead), run
+`git pull --ff-only origin main` and push again; if that fails, stop and tell the candidate. Never force.
 
 **Staging:** stage files by path (`git add typst/chapters/x.typ ...`), never `git add -A` or `git add .`. Never stage `complete thesis final draft print.pdf` or the signed proposal PDF.
 
@@ -249,7 +254,8 @@ Scopes are short: `proposal`, `thesis`, `ch1`…`ch5`, `meta`, `refs`, `handbook
 Examples: `lit(handbook): extract FoE by-laws 2022 thesis rules` ·
 `analysis(proposal): add citation audit` · `build(thesis): add FGS Annex V template`.
 
-**Never:** amend or rebase commits that already exist, force anything, commit failing builds, or push (there is no remote) unless asked.
+**Never:** amend or rebase commits that already exist, force-push or force anything, commit failing builds,
+create branches, or push anywhere but `origin main`.
 
 ## Communication
 - Keep responses terse, and put full substance in the Typst files.

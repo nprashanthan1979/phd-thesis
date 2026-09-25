@@ -80,6 +80,8 @@
   set figure(numbering: chap-num)
   set math.equation(numbering: n => [(#chap-num(n))])
   show figure.where(kind: table): set figure.caption(position: top)
+  // Keep a table caption on the same page as the table it heads.
+  show figure.caption.where(position: top): set block(sticky: true)
   show figure.caption: it => block(width: 100%, align(left)[
     #it.supplement #it.counter.display(it.numbering): #it.body
   ])
@@ -295,7 +297,35 @@
 }
 
 // Bordered placeholder, used until real content exists.
-#let todo(body) = block(
+#let todo(body) = block(breakable: false,
   width: 100%, inset: 8pt, stroke: (paint: gray, dash: "dashed"),
   text(fill: gray.darken(30%), style: "italic", body),
+)
+
+// Objective trace tag, e.g. #traces(1, 2) → "Objectives I, II". Every section
+// should trace to at least one objective (see CLAUDE.md).
+#let traces(..ns) = {
+  let ns = ns.pos()
+  let label = if ns.len() == 1 { "Objective " } else { "Objectives " }
+  block(above: 0.4em, below: 0.8em, text(size: 9pt, fill: blue.darken(20%),
+    label + ns.map(n => numbering("I", n)).join(", ")))
+}
+
+// Empty table with headers only; cells show "—" until real data exists.
+// Never fill these with invented numbers.
+#let table-skeleton(caption: [], rows: 3, ..headers) = {
+  let hs = headers.pos()
+  figure(caption: caption, table(
+    columns: hs.len(),
+    table.header(..hs.map(h => strong(h))),
+    ..range(rows * hs.len()).map(_ => text(fill: gray)[—]),
+  ))
+}
+
+// Figure placeholder box, captioned and numbered like a real figure.
+#let figure-placeholder(caption: [], height: 5cm, note) = figure(
+  kind: image,
+  caption: caption,
+  rect(width: 100%, height: height, stroke: (paint: gray, dash: "dashed"),
+    align(center + horizon, text(fill: gray.darken(30%), style: "italic", size: 10pt, note))),
 )

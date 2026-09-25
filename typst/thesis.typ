@@ -32,8 +32,16 @@
 #list-of-figures()
 #list-of-abbreviations((
   // Add entries as they are used in the text.
+  ([CFA], [Confirmatory Factor Analysis]),
+  ([CVI], [Content Validity Index]),
+  ([DOE], [Department of Examinations]),
+  ([EFA], [Exploratory Factor Analysis]),
   ([G.C.E (A/L)], [General Certificate of Education (Advanced Level)]),
   ([G.C.E (O/L)], [General Certificate of Education (Ordinary Level)]),
+  ([MKT], [Mathematical Knowledge for Teaching]),
+  ([MOE], [Ministry of Education]),
+  ([NCTM], [National Council of Teachers of Mathematics]),
+  ([NEC], [National Education Commission]),
   ([NIE], [National Institute of Education]),
 ))
 
@@ -41,8 +49,11 @@
 #include "thesis/ch1-introduction.typ"
 #include "thesis/ch2-literature-review.typ"
 #include "thesis/ch3-methodology.typ"
-#include "thesis/ch4-results.typ"
-#include "thesis/ch5-conclusion.typ"
+#include "thesis/ch4-phase1-results.typ"
+#include "thesis/ch5-phase2-findings.typ"
+#include "thesis/ch6-phase3-intervention.typ"
+#include "thesis/ch7-discussion.typ"
+#include "thesis/ch8-conclusion.typ"
 
 #heading(level: 1, numbering: none)[References]
 #set par(justify: false)

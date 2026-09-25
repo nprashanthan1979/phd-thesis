@@ -45,8 +45,17 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
     ├── analysis.typ      # Structured extraction + consistency review
     ├── template.typ      # Shared styling (`proposal` show rule, phase-box, ref-entry)
     ├── meta.typ          # Single source of structured data (objectives, phases, timeline, references)
-    └── chapters/         # One file per proposal section, included by main.typ
+    ├── chapters/         # One file per proposal section, included by main.typ
+    ├── thesis.typ        # PhD thesis entry point (front matter, chapters, refs, appendices)
+    ├── thesis-template.typ  # Thesis layout, modelled on the candidate's MPhil thesis PDF
+    └── thesis/           # Thesis chapters (ch1–ch5), abstract, appendices, references.bib, apa.csl
 ```
+
+Thesis layout (from `complete thesis final draft print.pdf`, the candidate's 2022 MPhil): A4; margins
+L 1.5in, R/T/B 1in; Times New Roman 12pt; 1.5 spacing; page number top-centre, Roman capitals in front
+matter, Arabic from Chapter 1; tables captioned above, figures below, numbered per chapter. APA 7 via
+the `versatile-apa` CSL (vendored in `thesis/apa.csl`); use `apa-figure` for table/figure notes.
+Only add `.bib` entries for sources the candidate has read.
 
 Add new research outputs as new Typst files under `typst/` (e.g. `typst/chapters/ch1-*.typ`, `typst/instruments/*.typ`).
 Put raw data under `data/` and analysis scripts under `analysis/`. Create these only when needed.
@@ -57,6 +66,7 @@ Put raw data under `data/` and analysis scripts under `analysis/`. Create these 
 cd typst
 typst compile main.typ proposal.pdf        # rebuild proposal
 typst compile analysis.typ analysis.pdf    # rebuild review
+typst compile thesis.typ thesis.pdf        # rebuild thesis
 typst watch analysis.typ                   # live rebuild while editing
 typst compile main.typ "/tmp/p-{p}.png" --ppi 60   # per-page PNGs for visual check
 ```

@@ -3,13 +3,10 @@
 //
 // UoC GenAI policy: every prose slot below is a placeholder for the
 // candidate's own draft. Do not let an AI tool write first drafts here.
-#import "meta.typ": title, student, supervisor
+#import "meta.typ": title, student, supervisor, thesis-info
 #import "thesis-template.typ": *
 
-// Fields not in the signed proposal — the candidate must confirm these.
-#let degree = "Doctor of Philosophy"
-#let year = "2027" // [CONFIRM] year of submission
-#let qualifications = "B.Sc, B.Ed, M.Sc in Science Education, M.Phil" // [CONFIRM]
+#let (degree, year, qualifications) = (thesis-info.degree, thesis-info.year, thesis-info.qualifications)
 
 #show: thesis.with(title: title, author: student.name)
 

@@ -134,3 +134,13 @@
   [Siregar, N. (2017). Problem-solving ability of students mathematics in problem-based learning. _Journal of Educational Science and Technology, 3_(3), 185–189.],
   [Voskoglou, M. G. (2011). Problem-solving from Polya to nowadays: A review and future perspectives. In A.R. Baswell (Ed). _Advances in mathematics research, 12_(1), 1-18. Nova Publishers.],
 )
+
+// Thesis front-matter fields (not in the signed proposal; candidate to confirm).
+// Abbreviation style: undotted British form (BSc, MPhil, PhD).
+#let thesis-info = (
+  degree: "Doctor of Philosophy",
+  degree-short: "PhD",
+  year: "2027", // [CONFIRM] year of submission
+  qualifications: "BSc, BEd, MSc in Science Education, MPhil", // [CONFIRM]
+  author-short: "N. Prashanthan",
+)

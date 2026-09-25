@@ -16,6 +16,10 @@ stack, `go vet`, `pnpm check`, etc.) does **not** apply here. Follow this file i
 | Design | Multi-phase mixed methods: Phase 1 quantitative survey → Phase 2 qualitative exploration → Phase 3 experimental/action intervention → teacher education module |
 | Population | Senior secondary (G.C.E. O/L, grades 10–11) mathematics teachers, Sri Lanka — confirmed by the candidate 2026-09-25; A/L is out of scope |
 
+"Senior secondary" in this study always means **G.C.E. O/L, grades 10–11**. Never reintroduce A/L
+(grades 12–13) into the thesis, instruments or sampling. The proposal's Participants section says only
+"secondary school mathematics teachers"; the thesis must say O/L explicitly.
+
 ### Research objectives (verbatim, numbered I–VI)
 1. Identify the current level of cognitive abilities of secondary mathematics teachers regarding problem-solving strategies.
 2. Explore the level of use of problem solving strategies in mathematics by senior secondary teachers.
@@ -38,8 +42,10 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
 
 ```
 .
-├── Research proposal _ Navarajah Prasanthan_Signed.pdf   # SOURCE OF TRUTH — never modify
+├── Research proposal _ Navarajah Prasanthan_Signed.pdf   # SOURCE OF TRUTH — never modify (MISSING from repo, see below)
+├── complete thesis final draft print.pdf   # Candidate's 2022 MPhil thesis — layout model only; never modify or stage
 ├── CLAUDE.md
+├── ai-use-log.md         # GenAI use log (UoC policy); append a row with every AI-assisted commit
 └── typst/
     ├── main.typ          # Faithful reconstruction of the signed proposal
     ├── analysis.typ      # Structured extraction + consistency review
@@ -51,14 +57,67 @@ These are listed in full in `typst/analysis.typ` § Consistency review. Keep the
     └── thesis/           # Thesis chapters (ch1–ch5), abstract, appendices, references.bib, apa.csl
 ```
 
-Thesis layout (from `complete thesis final draft print.pdf`, the candidate's 2022 MPhil): A4; margins
-L 40mm (binding), R 15mm, T/B 30mm; Times New Roman 12pt; 1.5 spacing; page number top-centre, Roman capitals in front
-matter, Arabic from Chapter 1; tables captioned above, figures below, numbered per chapter. APA 7 via
-the `versatile-apa` CSL (vendored in `thesis/apa.csl`); use `apa-figure` for table/figure notes.
-Only add `.bib` entries for sources the candidate has read.
+**Missing source (as of 2026-09-25):** the signed proposal PDF is not in the repo; only its transcription
+(`main.typ`, `chapters/*`, `meta.typ`) and the rebuilt `proposal.pdf` exist. `proposal.pdf` is *our*
+rebuild, not the source. Ask the candidate to restore the signed PDF before any new extraction from it.
+
+**MPhil PDF:** it has shown as modified on disk without Claude writing to it (likely a PDF viewer).
+Never stage it; if `git status` lists it, tell the candidate rather than committing or reverting it.
 
 Add new research outputs as new Typst files under `typst/` (e.g. `typst/chapters/ch1-*.typ`, `typst/instruments/*.typ`).
 Put raw data under `data/` and analysis scripts under `analysis/`. Create these only when needed.
+
+## PhD thesis (`typst/thesis.typ`)
+
+### Layout — candidate's instructions (binding)
+- A4. Margins **L 40mm (binding), R 15mm, T 30mm, B 30mm**.
+- Times New Roman 12pt, justified, **1.5 line spacing** = 20.7pt baseline pitch (1.5 × 1.15em single line).
+  If fonts or sizes change, recompute `leading` in `thesis-template.typ` and re-measure.
+- Page number top-centre. Cover unnumbered; inner title page = I (not printed); Roman capitals through
+  the front matter; Arabic from Chapter 1.
+- Front matter order (from the MPhil): cover → inner title → Declaration → Acknowledgements → Abstract
+  → Table of Contents → List of Tables → List of Figures → List of Abbreviations.
+- Chapter opening: "CHAPTER N" + title in capitals, centred, new page. Sections 1.1 / 1.1.1 / 1.1.1.1 bold.
+- Tables captioned **above**, figures **below**, numbered per chapter (Table 4.3, Figure 1.1). Captions stick
+  to their tables.
+- Appendices: "APPENDICES" divider, then `= Title` renders "Appendix-N: Title".
+- References: APA 7 via the `versatile-apa` 7.2.0 CSL, vendored as `thesis/apa.csl`, with a 0.5in
+  hanging indent. Do **not** apply the package's `versatile-apa` show rule: it forces US Letter,
+  double spacing and APA student-paper headings. Only `apa-figure` (table/figure notes) is imported,
+  so the first build needs network access to fetch the package.
+- Degree abbreviations are **undotted British form**: BSc, BEd, MSc, MPhil, PhD. Full name on title pages:
+  DOCTOR OF PHILOSOPHY. (The proposal's "P.hd" / "Phd" stay only in the verbatim transcription and the
+  index number.)
+
+### Structure — five chapters (candidate's decision, matches the MPhil)
+| File | Chapter | Objectives |
+|---|---|---|
+| `ch1-introduction.typ` | 1 Introduction | I–VI |
+| `ch2-literature-review.typ` | 2 Literature Review | I–VI |
+| `ch3-methodology.typ` | 3 Methodology (Phases 1–3, module development, integration, translation, ethics) | I–VI |
+| `ch4-results-discussion.typ` | 4 Results and Discussion: 4.2 Phase 1, 4.3 Phase 2, 4.4 Phase 3 + module, 4.5 Discussion | I–VI |
+| `ch5-conclusion.typ` | 5 Conclusions and Recommendations | I–VI |
+
+All phase results **and** all discussion belong in Chapter 4. Do not split them into separate chapters.
+
+### Data and helpers
+- Thesis front-matter facts (degree, short degree, year, qualifications, short author name) live in
+  `meta.typ` → `thesis-info`. Never hard-code them in chapter files.
+- `thesis-template.typ` helpers: `todo[...]` (guidance box), `traces(1, 2)` (objective tag), `table-skeleton`
+  (headers + "—" cells), `figure-placeholder`, `apa-figure`, `front-heading`, `front-matter`, `main-matter`,
+  `appendices`.
+- Guidance boxes say *what* a section must cover and cite the proposal section. They are never prose.
+  Replace a `todo` only with text the candidate wrote.
+- Skeleton tables stay "—" until real, anonymised data exists. Never enter example or plausible numbers.
+
+### Open items (update when resolved)
+- `thesis-info.year` = "2027" and `qualifications` are marked `[CONFIRM]`.
+- Official UoC degree title ("Doctor of Philosophy" vs "… in Education") not yet verified against the
+  FoE by-laws / FGS handbook.
+- Phase 3 → Objectives IV–VI is inferred; candidate to confirm.
+- Cosmetic: title wraps leaving "LANKA" alone on the last line (needs manual line breaks); Typst
+  hyphenates justified text, which the MPhil (WPS Writer) did not.
+- The Declaration wording is copied from the MPhil; check it against current FoE PhD rules.
 
 ## Commands
 
@@ -69,9 +128,18 @@ typst compile analysis.typ analysis.pdf    # rebuild review
 typst compile thesis.typ thesis.pdf        # rebuild thesis
 typst watch analysis.typ                   # live rebuild while editing
 typst compile main.typ "/tmp/p-{p}.png" --ppi 60   # per-page PNGs for visual check
+pdftotext -bbox -f N -l N thesis.pdf -              # word boxes in pt: measure margins (÷2.8346 = mm) and line pitch
 ```
 
 Typst version: 0.15.x. Fonts: Times New Roman (fallback Libertinus Serif).
+
+Verify layout changes by measurement, not by eye: compile a scratch copy of `thesis.typ` that includes a
+test chapter (`#lorem`, a table, a figure, a citation) and check word positions with `pdftotext -bbox`.
+Put scratch files in the session scratchpad or delete them; never commit them.
+
+**Shell gotchas (this machine):** `rm` is aliased to interactive `rm -i` and will hang a non-interactive
+command — use `\rm -f`. zsh errors on unmatched globs (`no matches found`), so guard `ls *.png` style
+commands. Wrap long compiles in `timeout 60`.
 
 ## Working rules
 
@@ -79,14 +147,15 @@ Typst version: 0.15.x. Fonts: Times New Roman (fallback Libertinus Serif).
 - `main.typ` and `chapters/*` are a **verbatim transcription**. Do not correct typos or wording there. Record them in `analysis.typ`.
 - If a revised proposal is wanted, create `typst/revised/` rather than editing the transcription.
 - Structured facts (objectives, phases, timeline, references, people) live **only** in `meta.typ`. Import them. Never retype them.
-- When extracting from a PDF, read it with `Read` using `pages:` ranges. The proposal has 14 pages, so use two reads. Tables and diagrams are images, so check them visually.
+- When extracting from a PDF, read it with `Read` using `pages:` ranges. The proposal has 14 pages, so use two reads. Tables and diagrams are images, so check them visually. For long PDFs (the MPhil has 196 pages) use `pdftotext -layout -f A -l B` for text and `pdftoppm -r 50` page renders for layout.
 
 ### Research and analysis
 - **Never fabricate** citations, DOIs, page numbers, statistics or quotes. When a source cannot be verified, mark it `[UNVERIFIED]` and state what needs checking.
 - For literature searches, use WebSearch/WebFetch. Record the full APA 7 reference plus the DOI/URL for every source used. Prefer peer-reviewed journals (e.g. ESM, JRME, ZDM, JMTE, IEJME) and official Sri Lankan sources (NIE, MOE, NEC, Department of Examinations).
 - Separate **what the source says** from **your inference**. Label inferences explicitly (as in the Phase 3 → IV–VI mapping).
 - Critique is for revision, not verdicts. Phrase issues as “X is inconsistent with Y; option: Z”.
-- Check every new chapter or instrument against the objectives I–VI. Each item should trace to at least one objective.
+- Check every new chapter or instrument against the objectives I–VI. Each item should trace to at least one objective (mark thesis sections with `#traces(...)`).
+- When the candidate states a fact about the study (population, structure, style), record it here and fix every place that contradicts it, including `analysis.typ`. Past error to avoid: the review once called O/L the "junior" examination; in this study O/L grades 10–11 are senior secondary.
 - Methodology suggestions must be feasible for a part-time PhD in Sri Lankan schools: zonal education offices, ethics clearance from the UoC Faculty of Education, and trilingual contexts (Sinhala/Tamil/English instruments may need translation and back-translation).
 
 ### Methodological defaults (suggest, don't impose)
@@ -135,7 +204,7 @@ The repo is local (no remote), and all work is committed on `main`. This overrid
 2. Run `git status` and `git diff --stat`, and check that no participant data, `.env`, or files under `data/raw/` are staged.
 3. If AI did anything that needs acknowledgement, add an entry to `ai-use-log.md` in the same commit.
 
-**Staging:** stage files by path (`git add typst/chapters/x.typ ...`), never `git add -A` or `git add .`.
+**Staging:** stage files by path (`git add typst/chapters/x.typ ...`), never `git add -A` or `git add .`. Never stage `complete thesis final draft print.pdf` or the signed proposal PDF.
 
 **Message format** (Conventional-Commits style, subject ≤ 72 chars, imperative mood):
 
@@ -158,7 +227,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 | `fix` | corrections to existing content or data |
 | `docs` | CLAUDE.md, READMEs, `ai-use-log.md` |
 
-Scopes are short: `proposal`, `thesis`, `ch1`…`ch6`, `meta`, `refs`, `handbook`, `ai-policy`.
+Scopes are short: `proposal`, `thesis`, `ch1`…`ch5`, `meta`, `refs`, `handbook`, `ai-policy`.
 
 Examples: `lit(handbook): extract FoE by-laws 2022 thesis rules` ·
 `analysis(proposal): add citation audit` · `build(thesis): add FGS Annex V template`.
